@@ -1,0 +1,5 @@
+setup(){
+}
+draw(){
+  background;
+}
