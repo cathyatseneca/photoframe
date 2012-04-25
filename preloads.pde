@@ -1,0 +1,17 @@
+/* @pjs preload="data/photo1.jpg,
+                 data/photo2.jpg,
+                 data/photo3.jpg,
+                 data/photo4.jpg,
+                 data/photo5.jpg,
+                 data/photo6.jpg,
+                 data/photo7.jpg,
+                 data/photo8.jpg,
+                 data/photo9.jpg,
+                 data/photo10.jpg,
+                 data/photo11.jpg,
+                 data/photo12.jpg,
+                 data/photo13.jpg,
+                 data/photo14.jpg,
+                 data/photo15.jpg,
+                 data/photo16.jpg";
+*/
