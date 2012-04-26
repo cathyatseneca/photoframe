@@ -4,10 +4,12 @@ PolkaDot [] dots=new PolkaDot[20];
 Tri [] tri=new Tri[20];
 PImage [] img=new PImage[16];
 Organizer album;
+FireWorks fireworks;
 void setup(){
   album=new Organizer();
-
+  
   size(1000,700);
+  fireworks=new FireWorks();
 //  size(window.innerWidth,window.innerHeight);
   for(int i=0;i<20;i++){
     float velx=((random(0,1)>0.5)?1:-1) *random(10,20);
@@ -24,11 +26,13 @@ void setup(){
   }
 }
 void draw(){
-  background(0);
+  background(255);
   for(int i=0;i<20;i++){
     dots[i].draw();
     tri[i].draw();
   }
-  album.draw();
+
+  fireworks.draw();
+//  album.draw();
   
  }
