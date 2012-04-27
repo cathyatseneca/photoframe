@@ -16,25 +16,17 @@ void setup(){
     fireworks[i]=new FireWorks();
   }
   for(int i=0;i<20;i++){
-    float velx=((random(0,1)>0.5)?1:-1) *random(10,20);
-    float vely=((random(0,1)>0.5)?1:-1) *random(10,20);
     dots[i]=new PolkaDot(random(0,width),random(0,height));
-    dots[i].setVelocity(velx,vely);
-
-    velx=((random(0,1)>0.5)?1:-1) *random(10,20);
-    vely=((random(0,1)>0.5)?1:-1) *random(10,20);
     tri[i]=new Tri(random(0,width),random(0,height));
-    tri[i].setVelocity(velx,vely);
-    tri[i].setAngularSpeed(random(-1,1));
   }
   for(int i=0;i<10;i++){
-    flowers[i]=new Flower(random(0,width), 10);
-    flowers[i].setVelocity(0,random(10,20));
-    flowers[i].setAngularSpeed(random(-2,2));    
+    flowers[i]=new Flower(random(10,width), random(10,height/2));
+ 
   }
+  p.setPosition(100,20);
 }
 void draw(){
-  background(0);
+  background(255);
   for(int i=0;i<20;i++){
     dots[i].draw();
     tri[i].draw();
