@@ -5,7 +5,7 @@ class Tri extends MovingSprite{
   float x2, y2;
   float x3, y3;
   Tri(float x, float y){
-    super(x,y);
+    super(x,y,0);
     //change the next line of code to change the color of the dots
     //color(r,g,b,a);
     //r is red, g is green, b is blue and a is alpha (opacity)
@@ -16,6 +16,11 @@ class Tri extends MovingSprite{
     y2=random(-10,-5);
     x3=random(10,20);
     y3=random(-10,-5);
+    
+    float velx=((random(0,1)>0.5)?1:-1) *random(10,20);
+    float vely=((random(0,1)>0.5)?1:-1) *random(10,20);
+    super.setVelocity(velx,vely);
+    super.setAngularSpeed(random(-1,1));
   }
   void draw(){
     super.update();
