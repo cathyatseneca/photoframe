@@ -10,6 +10,12 @@ class PolkaDot extends MovingSprite{
     //r is red, g is green, b is blue and a is alpha (opacity)
     co=color(random(0,255),random(0,255),random(0,255), random(50,200));
   }
+  void setSize(float x){
+    sz=x;
+  }
+  void setColour(color c){
+    co=c;
+  }
   void draw(){
     super.update();
     noStroke();
