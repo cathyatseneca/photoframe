@@ -6,8 +6,9 @@ Flower [] flowers=new Flower[10];
 PImage [] img=new PImage[16];
 Organizer album;
 FireWorks [] fireworks=new FireWorks[3];
-
+Poem p;
 void setup(){
+  p=new Poem();
   album=new Organizer();
   size(1000,700);
 //  size(window.innerWidth,window.innerHeight);
@@ -19,7 +20,6 @@ void setup(){
     float vely=((random(0,1)>0.5)?1:-1) *random(10,20);
     dots[i]=new PolkaDot(random(0,width),random(0,height));
     dots[i].setVelocity(velx,vely);
-
 
     velx=((random(0,1)>0.5)?1:-1) *random(10,20);
     vely=((random(0,1)>0.5)?1:-1) *random(10,20);
@@ -45,7 +45,6 @@ void draw(){
   for(int i=0;i<3;i++){
     fireworks[i].draw();
   }
-
+  p.draw();
   album.draw();
-  
  }
