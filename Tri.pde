@@ -19,6 +19,7 @@ class Tri extends MovingSprite{
     
     float velx=((random(0,1)>0.5)?1:-1) *random(10,20);
     float vely=((random(0,1)>0.5)?1:-1) *random(10,20);
+
     super.setVelocity(velx,vely);
     super.setAngularSpeed(random(-1,1));
   }
