@@ -8,10 +8,9 @@ Organizer album;
 FireWorks [] fireworks=new FireWorks[3];
 Poem p;
 void setup(){
+  size(window.innerWidth,window.innerHeight);
   p=new Poem();
   album=new Organizer();
-  size(1000,700);
-//  size(window.innerWidth,window.innerHeight);
   for(int i=0;i<3;i++){
     fireworks[i]=new FireWorks();
   }
@@ -26,7 +25,7 @@ void setup(){
   p.setPosition(100,20);
 }
 void draw(){
-  background(255);
+  background(255,255,255);
   for(int i=0;i<20;i++){
     dots[i].draw();
     tri[i].draw();
