@@ -40,14 +40,16 @@ class FireWorks{
   ArrayList points;
   float lastUpdate;
   PVector position;
+  float explosionDuration;
   float lastExplosion;
   color co;
   FireWorks(){
     points=new ArrayList();
-    for(float i = 0; i < PI * 2; i += 0.01){
+    for(float i = 0; i < PI * 2; i += 0.05){
       Particle p = new Particle();
       points.add(p);
     }
+    explosionDuration=random(5000,8000);
     reset();
   }
   void reset(){
@@ -62,7 +64,7 @@ class FireWorks{
       float v=min(width,height)/2;
       v=random(20,v);
       p.setEndPos(cos(j)*v,sin(j)*v);
-      j+=0.01;
+      j+=0.05;
     }
     lastUpdate=millis();
     lastExplosion=millis();
@@ -79,7 +81,7 @@ class FireWorks{
       p.update(dv/1000);
       p.draw();
     }
-    if(now-lastExplosion > 7000){
+    if(now-lastExplosion > explosionDuration){
       reset();
     }
   }

@@ -7,12 +7,12 @@ Organizer album;
 FireWorks [] fireworks=new FireWorks[3];
 void setup(){
   album=new Organizer();
-  
+
   size(1000,700);
+//  size(window.innerWidth,window.innerHeight);
   for(int i=0;i<3;i++){
     fireworks[i]=new FireWorks();
   }
-//  size(window.innerWidth,window.innerHeight);
   for(int i=0;i<20;i++){
     float velx=((random(0,1)>0.5)?1:-1) *random(10,20);
     float vely=((random(0,1)>0.5)?1:-1) *random(10,20);
@@ -28,7 +28,7 @@ void setup(){
   }
 }
 void draw(){
-  background(255);
+  background(0);
   for(int i=0;i<20;i++){
     dots[i].draw();
     tri[i].draw();
