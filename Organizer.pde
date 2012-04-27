@@ -1,8 +1,11 @@
 class Organizer{
-  PImage [] pictures=new PImage[numPhotos];
+  PImage [] pictures;
+  int numPhotos;
   int current;
   float lastUpdate;
   Organizer(){
+    numPhotos=16;
+    pictures=new PImage[numPhotos];
     lastUpdate=millis();
     current=0;
     for(int i=0;i<numPhotos;i++){

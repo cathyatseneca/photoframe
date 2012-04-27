@@ -1,16 +1,13 @@
-int numPhotos=16;
-
 PolkaDot [] dots=new PolkaDot[20];
 Tri [] tri=new Tri[20];
 Flower [] flowers=new Flower[10];
-PImage [] img=new PImage[16];
 Organizer album;
 FireWorks [] fireworks=new FireWorks[3];
 Poem p;
 void setup(){
+  size(window.innerWidth,window.innerHeight);
   p=new Poem();
   album=new Organizer();
-  size(window.innerWidth,window.innerHeight);
   for(int i=0;i<3;i++){
     fireworks[i]=new FireWorks();
   }
