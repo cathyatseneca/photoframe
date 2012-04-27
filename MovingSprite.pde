@@ -24,13 +24,29 @@ class MovingSprite{
     initial=new PVector(posX,posY);
     edgeReaction=er;
   }
+
+  /*sets Velocity of the sprite.  Think of the values as forming an arrow from 0,0 to x,y
+    the arrow is the direction the object will travel, how long the arrow is determines
+    how fast the sprite moves*/
   void setVelocity(float x, float y){
     float [] v={x,y};
     velocity.set(v);
   }
+
+  /*sets the Angular Speed of the sprite. Positive values create a clockwise spin.
+    Negative values create a counter clockwise spin*/
   void setAngularSpeed(float x){
     angularSpeed=x;
   }
+
+  /*this function sets how the sprite behaves when it reaches the edge.
+    0 means it bounces, 1 means it goes back to it's initial positon
+    2 means it starts at the opposite edge from where it diappeared*/
+  void setEdgeReaction(int er){
+    edgeReaction=er;
+  }
+
+
   void update(){
     float now=millis();
     float delta=now-lastUpdate;

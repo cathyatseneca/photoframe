@@ -16,8 +16,7 @@ void setup(){
     tri[i]=new Tri(random(0,width),random(0,height));
   }
   for(int i=0;i<10;i++){
-    flowers[i]=new Flower(random(10,width), random(10,height/2));
- 
+    flowers[i]=new Flower(random(10,width), random(10,height/2)); 
   }
   p.setPosition(100,20);
 }
