@@ -16,6 +16,19 @@ class Organizer{
       current=(current+1)%numPhotos;
     }
     imageMode(CENTER);
-    image(pictures[current],width/2,height/2);
+    float picWidth=pictures[current].width;
+    float picHeight=pictures[current].height;
+    
+    if(picWidth>width){
+      float ratio=(0.6*width)/picWidth;
+      picHeight=ratio*picHeight;
+      picWidth=0.6*width;
+    }
+    if(picHeight>height){
+      float ratio=(0.6*height)/picHeight;
+      picWidth=ratio*picWidth;
+      picHeight=0.6*height;
+    }
+    image(pictures[current],width/2,height/2,picWidth,picHeight);
   }
 }
