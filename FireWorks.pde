@@ -22,8 +22,8 @@ class Particle{
     endPos.set(x,y,0);
   }
   
-  void setColour(color c){
-    co=c;
+  void setColour(float r,float g, float b, float a){
+    co=color(r,g,b,a);
   }
   void update(float normalizedValue){
     currPos.x = currPos.x + (endPos.x * normalizedValue);

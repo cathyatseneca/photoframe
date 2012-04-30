@@ -72,8 +72,8 @@ class Poem{
   void setSpeed(float s){
     speed=s;
   }
-  void setColor(color c){
-    co=c;
+  void setColour(float r,float g, float b, float a){
+    co=color(r,g,b,a);
   }
   void draw(){
     counter++;
