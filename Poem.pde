@@ -24,7 +24,6 @@ class Poem{
     poem = new ArrayList();
     for(int i=0;i<numLines;i++){
       poem.add(lines[i]);
-    println(lines[i]);
     }
   }
   void setRotation(float r){
