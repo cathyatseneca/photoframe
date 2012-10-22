@@ -20,8 +20,8 @@ class Flower extends MovingSprite{
   void setSize(float x){
     sz=x;
   }
-  void setColour(color c){
-    co=c;
+  void setColour(float r,float g, float b, float a){
+    co=color(r,g,b,a);
   }
   void draw(){
     super.update();

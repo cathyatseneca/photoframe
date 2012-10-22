@@ -23,6 +23,9 @@ class Tri extends MovingSprite{
     super.setVelocity(velx,vely);
     super.setAngularSpeed(random(-1,1));
   }
+  void setColour(float r, float g, float b, float a){
+    co=color(r,g,b,a);
+  }
   void draw(){
     super.update();
     noStroke();

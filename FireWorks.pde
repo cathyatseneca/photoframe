@@ -22,8 +22,11 @@ class Particle{
     endPos.set(x,y,0);
   }
   
+  void setColour(float r,float g, float b, float a){
+    co=color(r,g,b,a);
+  }
   void setColour(color c){
-    co=c;
+   co=c;
   }
   void update(float normalizedValue){
     currPos.x = currPos.x + (endPos.x * normalizedValue);
@@ -31,7 +34,7 @@ class Particle{
   }
   
   void draw(){
-    strokeWeight(2);
+    strokeWeight(3);
     stroke(co);
     point(currPos.x, currPos.y);
   }
@@ -43,6 +46,7 @@ class FireWorks{
   float explosionDuration;
   float lastExplosion;
   color co;
+  boolean isRandomColour;
   FireWorks(){
     points=new ArrayList();
     for(float i = 0; i < PI * 2; i += 0.05){
@@ -50,13 +54,15 @@ class FireWorks{
       points.add(p);
     }
     explosionDuration=random(5000,8000);
+    isRandomColour=true;
     reset();
   }
   void reset(){
     float x=random(100, width-100);
     float y=random(100, height-100);
     float j=0;
-    co=color(random(0,255),random(0,255),random(0,255));
+    if(isRandomColour)
+      co=color(random(0,255),random(0,255),random(0,255));
     for(int i=0;i<points.size();i++){
       Particle p=(Particle)points.get(i);
       p.setColour(co);
@@ -69,8 +75,9 @@ class FireWorks{
     lastUpdate=millis();
     lastExplosion=millis();
   }
-  void setColor(color c){
-    co=c;
+  void setColour(float r,float g, float b){
+    co=color(r,g,b);
+    isRandomColour=false;
   }
   void draw(){
     float now=millis();

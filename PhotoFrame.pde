@@ -6,7 +6,7 @@ FireWorks [] fireworks=new FireWorks[3];
 Poem p;
 void setup(){
   size(window.innerWidth,window.innerHeight);
-  p=new Poem();
+  p=new Poem("ozymandius.txt");
   album=new Organizer();
   for(int i=0;i<3;i++){
     fireworks[i]=new FireWorks();
@@ -17,7 +17,7 @@ void setup(){
   }
   for(int i=0;i<10;i++){
     flowers[i]=new Flower(random(10,width), random(10,height/2));
- 
+
   }
   p.setPosition(100,20);
 }
@@ -36,3 +36,5 @@ void draw(){
   p.draw();
   album.draw();
  }
+
+
